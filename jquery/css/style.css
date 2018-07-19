@@ -1,0 +1,46 @@
+.board {
+  width: 400px;
+  height: 400px;
+  background:red;
+}
+.swbtn {
+  padding: 170px 170px;
+}
+.bgcolor {
+  background-color: yellow;
+}
+.text-center {
+  text-align: center;
+}
+.color-gray {
+  width: 400px;
+  height: 400px;
+   background:gray;
+}
+.item {
+   float: right;
+}
+.list-item-odd {
+  width: 200px;
+  height: 20px;
+  margin: 5px;
+  background: gray;
+  color: white;
+}
+
+.hidden {
+display: none;
+}
+.list-item-even {
+  width: 200px;
+  height: 20px;
+  margin: 5px;
+  background: black;
+  color:white;
+}
+.pressed {
+  background:gray;
+}
+.checked {
+  background-color: green;
+}
