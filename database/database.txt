@@ -1,0 +1,129 @@
+purpose---To maintain the Health Consulting issues
+
+Entity---
+  -User
+  -Doctor
+  -Patient
+  -Transction
+  -Admin
+  -Pharmacy
+  -Insurance
+  -Appointment
+  -clinic
+  -Rating
+  -Result
+  -Doctor_Clinic
+  -Patient_Transaction
+  -Patient_Pharmacy
+  -Patient_Insurance
+
+Attributes--
+
+User
+  -user_id       int              PK
+  -user_name     string
+  -user_email    string
+  -user_phone    string
+  -user_address  string
+
+Doctors
+  -doctor_id              int           PK
+  -doctor_name            string
+  -doctor_email           string
+  -doctor_phone           string
+  -doctor_address         string
+  -doctor_degree          string
+  -doctor_specialist      string
+  -doctor_gender          string
+  -doctor_city            string
+  -doctor_available_time  time
+  -doctor_vacation        string
+  -doctor_username        string
+  -doctor_password        string
+
+Patients
+  -patient_id        int             Pk
+  -patient_name      string
+  -patient_age       int
+  -patiente_email    string
+  -patient_phone     string
+  -patient_address   string
+  -patient_gender    string
+  -patient_disease   string
+  -patient_symptoms  string
+  -patient_username  string
+  -patient_password  string
+
+Ratings
+  -rating_id    int          PK
+  -doctor_id    int          FK
+  -patient_id   int          Fk
+  -ratings      int
+  -suggestions  string
+
+Result
+  -result_id           int                PK
+  -patient_id          int                FK
+  -doctor_id           int                FK
+  -result_description  string
+
+Doctor_Clinic
+  -dc_id      int          PK
+  -doctor_id  int          FK
+  -clinic_id  int          FK
+
+Transactions
+  -transaction_id      int          PK
+  -transaction_amount  int
+  -transaction_type    string
+  -transaction_status  string
+
+Patient_Transaction
+  -pt_id           int          PK
+  -patient_id      int          FK
+  -transaction_id  int          FK
+
+Admin
+  -admin_id    int           PK
+  -admin_name  string
+
+Pharmacy
+  -medicine_id        int               PK
+  -medicine_name      string
+  -medicine_company   string
+  -medicine_content   string
+  -medicine_mfg_date  date
+  -medicine_exp_date  date
+
+Patient_Pharmacy
+  -pp_id        int            PK
+  -medicine_id  int            FK
+  -patient_id   int            FK
+
+Insurance
+  -insurance_id          int           PK
+  -insurance_name        string
+  -insurance_type        string
+  -insurance_premium     int
+  -insurance_start_date  date
+  -insurance_exp_date    date
+
+Patient_Insurance
+  -pi_id         int             PK
+  -patient_id    int             FK
+  -insurance_id  int             FK
+
+Clinics
+  -clinic_id           int              PK
+  -clinic_name         string
+  -clinic_address      string
+  -clinic_description  string
+
+Appointments
+  -appointment_id           int           PK
+  -appointment_date         date
+  -appointment_time         time
+  -appoimtment_description  string
+  -patient_id               int           FK
+  -doctor_id                int           FK
+
